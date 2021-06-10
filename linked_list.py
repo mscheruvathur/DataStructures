@@ -24,9 +24,17 @@ class LinkedList:
         itr.next = Node(data,None)
 
     def insert_new_value(self,data):
-        if self.head is None:
-            
+        self.head = None
+        for data in data:
+            self.insert_at_end(data,)
 
+    def get_length(self):
+        count = 0
+        itr = self.head
+        while itr:
+            count += 1
+            itr = itr.next
+        return count
         
 
     def print(self):
@@ -48,3 +56,7 @@ ll.insert_at_begining(13)
 ll.print()
 ll.insert_at_end(14)
 ll.print()
+values = ['sam','abhi','sanu','salva']
+ll.insert_new_value(values)
+ll.print()
+print(ll.get_length())
