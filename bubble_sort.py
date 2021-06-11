@@ -1,5 +1,6 @@
 
 def bubble_sort(sequence):
+    
     for i in range(len(sequence)-1):
         swapped = False
         for j in range(len(sequence)-1-i):
@@ -8,8 +9,8 @@ def bubble_sort(sequence):
                 sequence[j] = sequence[j+1]
                 sequence[j+1] = temp
                 swapped = True
-            if not swapped:
-                break
+        if not swapped:
+            break
 
 
 
